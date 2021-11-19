@@ -1,0 +1,22 @@
+{
+  "name": "cypress-getting-started",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studiojms/cypress-getting-started.git"
+  },
+  "author": "studiojms",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/studiojms/cypress-getting-started/issues"
+  },
+  "homepage": "https://github.com/studiojms/cypress-getting-started#readme",
+  "devDependencies": {
+    "cypress": "^9.0.0"
+  }
+}
