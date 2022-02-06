@@ -1,4 +1,4 @@
-import SignUpPage from '../pages/SignUpPage';
+import signUpPage from '../pages/SignUpPage';
 
 describe('Sign up', () => {
   it('User must be a deliveryman', () => {
@@ -18,8 +18,6 @@ describe('Sign up', () => {
       delivery_method: 'Moto',
       file: 'images/user-document.jpeg',
     };
-
-    const signUpPage = new SignUpPage();
 
     signUpPage.go();
     signUpPage.fillForm(deliveryman);
@@ -48,8 +46,6 @@ describe('Sign up', () => {
       delivery_method: 'Moto',
       file: 'images/user-document.jpeg',
     };
-
-    const signUpPage = new SignUpPage();
 
     signUpPage.go();
     signUpPage.fillForm(deliveryman);
