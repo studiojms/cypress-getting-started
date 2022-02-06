@@ -1,17 +1,12 @@
+import SignUpFactory from '../factories/SignUpFactory';
 import signUpPage from '../pages/SignUpPage';
 
 describe('Sign up', () => {
-  let deliveryman = null;
-
-  before(() => {
-    cy.fixture('deliveryman').then((data) => {
-      deliveryman = data;
-    });
-  });
-
   it('should allow usert to be a deliveryman', () => {
+    const deliveryman = SignUpFactory.deliveryman();
+
     signUpPage.go();
-    signUpPage.fillForm(deliveryman.signup);
+    signUpPage.fillForm(deliveryman);
     signUpPage.submit();
 
     const expectedMessage =
@@ -21,8 +16,12 @@ describe('Sign up', () => {
   });
 
   it('should show error when using invalid document', () => {
+    const deliveryman = SignUpFactory.deliveryman();
+
+    deliveryman.cpf = '000000414AA';
+
     signUpPage.go();
-    signUpPage.fillForm(deliveryman.invalidDocument);
+    signUpPage.fillForm(deliveryman);
     signUpPage.submit();
 
     const expectedMessage = 'Oops! CPF inválido';
@@ -31,8 +30,12 @@ describe('Sign up', () => {
   });
 
   it('should show error when using invalid email', () => {
+    const deliveryman = SignUpFactory.deliveryman();
+
+    deliveryman.email = 'test.test.com';
+
     signUpPage.go();
-    signUpPage.fillForm(deliveryman.invalidEmail);
+    signUpPage.fillForm(deliveryman);
     signUpPage.submit();
 
     const expectedMessage = 'Oops! Email com formato inválido.';
