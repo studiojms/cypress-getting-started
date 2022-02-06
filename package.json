@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/studiojms/cypress-getting-started#readme",
   "devDependencies": {
-    "cypress": "^9.0.0"
+    "cypress": "^9.4.1",
+    "cypress-file-upload": "^5.0.8"
   }
 }
