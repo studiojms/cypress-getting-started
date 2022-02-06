@@ -30,5 +30,21 @@
     },
     "delivery_method": "Moto",
     "file": "images/user-document.jpeg"
+  },
+  "invalidEmail": {
+    "name": "John Doe",
+    "cpf": "00000014141",
+    "email": "john.doe.com",
+    "whatsapp": "11999999999",
+    "address": {
+      "postalcode": "04534011",
+      "street": "Rua Joaquim Floriano",
+      "number": "1000",
+      "details": "Ap 443",
+      "district": "Itaim Bibi",
+      "city_st": "São Paulo/SP"
+    },
+    "delivery_method": "Moto",
+    "file": "images/user-document.jpeg"
   }
 }
